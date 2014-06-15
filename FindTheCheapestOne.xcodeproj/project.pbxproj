@@ -22,6 +22,7 @@
 		8829AF10194E481400E9699C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8829AEF4194E481400E9699C /* CoreData.framework */; };
 		8829AF18194E481400E9699C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8829AF16194E481400E9699C /* InfoPlist.strings */; };
 		8829AF1A194E481400E9699C /* FindTheCheapestOneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8829AF19194E481400E9699C /* FindTheCheapestOneTests.m */; };
+		8829AF24194E483100E9699C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8829AF23194E483100E9699C /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8829AF15194E481400E9699C /* FindTheCheapestOneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindTheCheapestOneTests-Info.plist"; sourceTree = "<group>"; };
 		8829AF17194E481400E9699C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8829AF19194E481400E9699C /* FindTheCheapestOneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindTheCheapestOneTests.m; sourceTree = "<group>"; };
+		8829AF23194E483100E9699C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				8829AEFF194E481400E9699C /* AppDelegate.h */,
 				8829AF00194E481400E9699C /* AppDelegate.m */,
+				8829AF23194E483100E9699C /* Storyboard.storyboard */,
 				8829AF05194E481400E9699C /* Images.xcassets */,
 				8829AF02194E481400E9699C /* FindTheCheapestOne.xcdatamodeld */,
 				8829AEF7194E481400E9699C /* Supporting Files */,
@@ -230,6 +233,7 @@
 			files = (
 				8829AEFB194E481400E9699C /* InfoPlist.strings in Resources */,
 				8829AF06194E481400E9699C /* Images.xcassets in Resources */,
+				8829AF24194E483100E9699C /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
