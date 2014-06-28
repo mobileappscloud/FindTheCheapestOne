@@ -9,13 +9,14 @@
 #import "ResultsTableViewController.h"
 #import "NiceTableViewCell.h"
 #import "SearchViewController.h"
+#import "DetailsViewController.h"
 
 @interface ResultsTableViewController ()
 
 @end
 
 @implementation ResultsTableViewController
-@synthesize brandString, nameString, priceString, cellImageView;
+@synthesize brandString, nameString, priceString, cellImageView, theUrlString;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -55,6 +56,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -148,12 +151,86 @@
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"go"])
+    {
+        DetailsViewController *dVC = (DetailsViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        NSString *correctURLString = [NSString stringWithFormat:@"%@", theUrlString];
+        NSURL *url = [NSURL URLWithString:correctURLString];
+        
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        
+        NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
+        
+        
+        NSArray *itemCallArray = [NSArray arrayWithArray:dataDictionary[@"results"]];
+        
+    
+        for (NSDictionary *theItem in itemCallArray)
+        {
+        NSString *currentItem = [objectTitlesArray objectAtIndex:indexPath.row];
+            if ([currentItem isEqualToString:theItem[@"title"]])
+            {
+                NSArray *brandsArray = theItem[@"brands"];
+                NSDictionary *bestPageDictionary = theItem[@"best_page"];
+                
+                
+                NSNumber *price = bestPageDictionary[@"price"];
+                NSString *zeePriceString = [NSString stringWithFormat:@"%@", price];
+                
+
+                [dVC setTheItemName:currentItem];
+                [dVC setTheItemBrand:[brandsArray firstObject]];
+                
+                if ([zeePriceString isEqualToString:@"<null>"])
+                {
+                    [dVC setTheItemPrice:@"Price Unavailable"];
+                }
+                
+                else
+                {
+                
+                
+                [dVC setTheItemPrice:[NSString stringWithFormat:@"%@", price]];
+                }
+                
+                NSString *imgurlString = bestPageDictionary[@"image_url"];
+                NSURL *imageURL = [NSURL URLWithString:imgurlString];
+                NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+                UIImage *zeeimageForCell = [UIImage imageWithData:imageData];
+                
+                [dVC setItemDisplayImage:zeeimageForCell];
+                
+                NSString *webSiteUrlString = bestPageDictionary[@"original_url"];
+                [dVC setWebURLString:webSiteUrlString];
+                
+                
+            }
+        }
+        
+       
+
+        
+    }
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 78;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
+    [self performSegueWithIdentifier:@"go" sender:nil];
+    
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

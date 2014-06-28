@@ -21,5 +21,6 @@
 @property (nonatomic, strong)NSString *priceString;
 @property (nonatomic, strong)NSString *brandString;
 @property (nonatomic, strong) UIImageView *cellImageView;
+@property (nonatomic, strong) NSString *theUrlString;
 
 @end

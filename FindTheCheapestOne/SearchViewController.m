@@ -85,6 +85,7 @@
              [tableVC setArray:titleArray];
             
             [tableVC setArray2:itemCallArray];
+            [tableVC setTheUrlString: urlString];
         
             
         }

@@ -26,6 +26,9 @@
 		8829AF1A194E481400E9699C /* FindTheCheapestOneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8829AF19194E481400E9699C /* FindTheCheapestOneTests.m */; };
 		8829AF24194E483100E9699C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8829AF23194E483100E9699C /* Storyboard.storyboard */; };
 		8829AF27194E4D1600E9699C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8829AF26194E4D1600E9699C /* SearchViewController.m */; };
+		88E3AB39195F5E8A00E8BECA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E3AB38195F5E8A00E8BECA /* WebViewController.m */; };
+		88E3AB3B195F60B400E8BECA /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E3AB3A195F60B400E8BECA /* button.png */; };
+		88E3AB3D195F614600E8BECA /* GreenNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E3AB3C195F614600E8BECA /* GreenNavBar.png */; };
 		88F3A050195CA5F800F45775 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F3A04F195CA5F800F45775 /* ResultsTableViewController.m */; };
 		88F3A053195CDB7700F45775 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F3A052195CDB7700F45775 /* DetailsViewController.m */; };
 		88FDA1D4195EAECC00009B2F /* list-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FDA1D3195EAECC00009B2F /* list-item.png */; };
@@ -66,6 +69,10 @@
 		8829AF23194E483100E9699C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		8829AF25194E4D1600E9699C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		8829AF26194E4D1600E9699C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		88E3AB37195F5E8A00E8BECA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		88E3AB38195F5E8A00E8BECA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		88E3AB3A195F60B400E8BECA /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		88E3AB3C195F614600E8BECA /* GreenNavBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenNavBar.png; sourceTree = "<group>"; };
 		88F3A04E195CA5F800F45775 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		88F3A04F195CA5F800F45775 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		88F3A051195CDB7700F45775 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -134,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				88FDA1D3195EAECC00009B2F /* list-item.png */,
+				88E3AB3A195F60B400E8BECA /* button.png */,
+				88E3AB3C195F614600E8BECA /* GreenNavBar.png */,
 				8829AEFF194E481400E9699C /* AppDelegate.h */,
 				8829AF00194E481400E9699C /* AppDelegate.m */,
 				8829AF23194E483100E9699C /* Storyboard.storyboard */,
@@ -146,6 +155,8 @@
 				880224E3195DD7F500F65DD7 /* NiceTableViewCell.xib */,
 				880224E5195DD9D600F65DD7 /* NiceTableViewCell.h */,
 				880224E6195DD9D600F65DD7 /* NiceTableViewCell.m */,
+				88E3AB37195F5E8A00E8BECA /* WebViewController.h */,
+				88E3AB38195F5E8A00E8BECA /* WebViewController.m */,
 				8829AF05194E481400E9699C /* Images.xcassets */,
 				8829AF02194E481400E9699C /* FindTheCheapestOne.xcdatamodeld */,
 				8829AEF7194E481400E9699C /* Supporting Files */,
@@ -258,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				880224E4195DD7F500F65DD7 /* NiceTableViewCell.xib in Resources */,
+				88E3AB3B195F60B400E8BECA /* button.png in Resources */,
 				88FDA1D4195EAECC00009B2F /* list-item.png in Resources */,
 				8829AEFB194E481400E9699C /* InfoPlist.strings in Resources */,
+				88E3AB3D195F614600E8BECA /* GreenNavBar.png in Resources */,
 				8829AF06194E481400E9699C /* Images.xcassets in Resources */,
 				8829AF24194E483100E9699C /* Storyboard.storyboard in Resources */,
 			);
@@ -283,6 +296,7 @@
 				880224E7195DD9D600F65DD7 /* NiceTableViewCell.m in Sources */,
 				8829AF01194E481400E9699C /* AppDelegate.m in Sources */,
 				8829AF04194E481400E9699C /* FindTheCheapestOne.xcdatamodeld in Sources */,
+				88E3AB39195F5E8A00E8BECA /* WebViewController.m in Sources */,
 				8829AF27194E4D1600E9699C /* SearchViewController.m in Sources */,
 				88F3A053195CDB7700F45775 /* DetailsViewController.m in Sources */,
 				8829AEFD194E481400E9699C /* main.m in Sources */,

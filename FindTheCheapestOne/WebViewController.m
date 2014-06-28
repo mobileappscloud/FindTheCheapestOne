@@ -1,20 +1,19 @@
 //
-//  DetailsViewController.m
+//  WebViewController.m
 //  FindTheCheapestOne
 //
-//  Created by iMac on 6/26/14.
+//  Created by iMac on 6/28/14.
 //  Copyright (c) 2014 CongenialApps. All rights reserved.
 //
 
-#import "DetailsViewController.h"
 #import "WebViewController.h"
 
-@interface DetailsViewController ()
+@interface WebViewController ()
 
 @end
 
-@implementation DetailsViewController
-@synthesize itemBrand, itemImageView, itemName, itemPrice, URLString, itemDisplayImage, theItemBrand, theItemName, theItemPrice, webURLString;
+@implementation WebViewController
+@synthesize theWebView, webSiteURL;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,10 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    itemBrand.text = theItemBrand;
-    itemPrice.text = theItemPrice;
-    itemName.text = theItemName;
-    [itemImageView setImage:itemDisplayImage];
+    
+    NSString *urlString = webSiteURL;
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [theWebView loadRequest:request];
     // Do any additional setup after loading the view.
 }
 
@@ -39,15 +39,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"show"]) {
-        WebViewController *WVC = (WebViewController *)segue.destinationViewController;
-        [WVC setWebSiteURL:webURLString];
-         
-    }
 }
 
 /*
@@ -61,6 +52,4 @@
 }
 */
 
-- (IBAction)purchaseItem:(id)sender {
-}
 @end
