@@ -26,6 +26,7 @@
 		8829AF1A194E481400E9699C /* FindTheCheapestOneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8829AF19194E481400E9699C /* FindTheCheapestOneTests.m */; };
 		8829AF24194E483100E9699C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8829AF23194E483100E9699C /* Storyboard.storyboard */; };
 		8829AF27194E4D1600E9699C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8829AF26194E4D1600E9699C /* SearchViewController.m */; };
+		88950B981960A4F600AC54C5 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88950B971960A4F600AC54C5 /* InfoViewController.m */; };
 		88E3AB39195F5E8A00E8BECA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E3AB38195F5E8A00E8BECA /* WebViewController.m */; };
 		88E3AB3B195F60B400E8BECA /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E3AB3A195F60B400E8BECA /* button.png */; };
 		88E3AB3D195F614600E8BECA /* GreenNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E3AB3C195F614600E8BECA /* GreenNavBar.png */; };
@@ -69,6 +70,8 @@
 		8829AF23194E483100E9699C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		8829AF25194E4D1600E9699C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		8829AF26194E4D1600E9699C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		88950B961960A4F600AC54C5 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		88950B971960A4F600AC54C5 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		88E3AB37195F5E8A00E8BECA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		88E3AB38195F5E8A00E8BECA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		88E3AB3A195F60B400E8BECA /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				880224E6195DD9D600F65DD7 /* NiceTableViewCell.m */,
 				88E3AB37195F5E8A00E8BECA /* WebViewController.h */,
 				88E3AB38195F5E8A00E8BECA /* WebViewController.m */,
+				88950B961960A4F600AC54C5 /* InfoViewController.h */,
+				88950B971960A4F600AC54C5 /* InfoViewController.m */,
 				8829AF05194E481400E9699C /* Images.xcassets */,
 				8829AF02194E481400E9699C /* FindTheCheapestOne.xcdatamodeld */,
 				8829AEF7194E481400E9699C /* Supporting Files */,
@@ -295,6 +300,7 @@
 			files = (
 				880224E7195DD9D600F65DD7 /* NiceTableViewCell.m in Sources */,
 				8829AF01194E481400E9699C /* AppDelegate.m in Sources */,
+				88950B981960A4F600AC54C5 /* InfoViewController.m in Sources */,
 				8829AF04194E481400E9699C /* FindTheCheapestOne.xcdatamodeld in Sources */,
 				88E3AB39195F5E8A00E8BECA /* WebViewController.m in Sources */,
 				8829AF27194E4D1600E9699C /* SearchViewController.m in Sources */,
@@ -417,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindTheCheapestOne/FindTheCheapestOne-Prefix.pch";
 				INFOPLIST_FILE = "FindTheCheapestOne/FindTheCheapestOne-Info.plist";
@@ -430,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindTheCheapestOne/FindTheCheapestOne-Prefix.pch";
 				INFOPLIST_FILE = "FindTheCheapestOne/FindTheCheapestOne-Info.plist";

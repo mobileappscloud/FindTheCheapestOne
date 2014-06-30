@@ -10,5 +10,6 @@
 
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *searchedItem;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityInd;
 
 @end

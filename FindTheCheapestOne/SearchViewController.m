@@ -16,10 +16,16 @@
 @end
 
 @implementation SearchViewController
-@synthesize searchedItem;
+@synthesize searchedItem, activityInd;
 
 
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    textField.delegate = self;
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +39,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    searchedItem.delegate = self;
+    activityInd.hidden = YES;
 
     
     
@@ -47,15 +54,20 @@
 {
     if ([segue.identifier isEqualToString:@"next"])
     {
+        [searchedItem resignFirstResponder];
+        activityInd.hidden = NO;
+        [self.activityInd startAnimating];
         
         ResultsTableViewController *tableVC = (ResultsTableViewController *)segue.destinationViewController;
         
         
-        NSString *urlString = [NSString stringWithFormat:@"http://us.api.invisiblehand.co.uk/v1/products?query=%@&app_id=dad00cb7&app_key=ab386c3e1b99b58b876f237d77b4211a", searchedItem.text];
+        NSString *urlString = [NSString stringWithFormat:@"http://us.api.invisiblehand.co.uk/v1/products?query=%@&app_id=dad00cb7&app_key=ab386c3e1b99b58b876f237d77b4211a", [[searchedItem.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"]];
         
         NSURL *url = [NSURL URLWithString:urlString];
         
         NSData *data = [NSData dataWithContentsOfURL:url];
+        
+        
         
         NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
@@ -86,6 +98,8 @@
             
             [tableVC setArray2:itemCallArray];
             [tableVC setTheUrlString: urlString];
+            
+            
         
             
         }
@@ -93,13 +107,7 @@
 }
 
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    textField.delegate = self;
-    [textField resignFirstResponder];
-    
-    return YES;
-}
+
 
 - (void)didReceiveMemoryWarning
 {

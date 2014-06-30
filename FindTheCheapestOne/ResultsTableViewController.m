@@ -111,26 +111,27 @@
            
                 NSNumber *price = bestPageDictionary[@"price"];
                 
-                if ((cell.priceLabel.text = @"<null>")) {
-                    
-                    cell.priceLabel.text = @"Price Unkown";
-                }
-                else
-                {
-                cell.priceLabel.text = [NSString stringWithFormat:@"$%@", price];
-                }
+               cell.priceLabel.text = [NSString stringWithFormat:@"$%@", price];
                 
+                if ([cell.priceLabel.text  isEqualToString:@"<null>"])
+                {
+                    cell.priceLabel.text = @"Price Unknown";
+                }
                 
             
                 
+                
                 NSArray *brandsArray = objItem[@"brands"];
-            cell.brandLabel.text = [brandsArray firstObject];
+                cell.brandLabel.text = [brandsArray firstObject];
                 
                 NSString *urlString = bestPageDictionary[@"image_url"];
                 NSURL *imageURL = [NSURL URLWithString:urlString];
                 NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
                 UIImage *imageForCell = [UIImage imageWithData:imageData];
                 [cell.cellImage setImage:imageForCell];
+                
+                
+                
             }
             
         }
@@ -164,7 +165,7 @@
         
         NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
-        
+    
         
         NSArray *itemCallArray = [NSArray arrayWithArray:dataDictionary[@"results"]];
         
@@ -179,23 +180,17 @@
                 
                 
                 NSNumber *price = bestPageDictionary[@"price"];
-                NSString *zeePriceString = [NSString stringWithFormat:@"%@", price];
+             //   NSString *zeePriceString = [NSString stringWithFormat:@"%@", price];
                 
 
                 [dVC setTheItemName:currentItem];
                 [dVC setTheItemBrand:[brandsArray firstObject]];
                 
-                if ([zeePriceString isEqualToString:@"<null>"])
-                {
-                    [dVC setTheItemPrice:@"Price Unavailable"];
-                }
-                
-                else
-                {
+            
                 
                 
                 [dVC setTheItemPrice:[NSString stringWithFormat:@"%@", price]];
-                }
+                
                 
                 NSString *imgurlString = bestPageDictionary[@"image_url"];
                 NSURL *imageURL = [NSURL URLWithString:imgurlString];
