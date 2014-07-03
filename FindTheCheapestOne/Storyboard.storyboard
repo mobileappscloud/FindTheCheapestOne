@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BEf-rh-Vur">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aPJ-yF-qha">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgy-25-AST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="-536"/>
+            <point key="canvasLocation" x="2254" y="-536"/>
         </scene>
         <!--Search View Controller - Search For An Item-->
         <scene sceneID="KoC-yR-oF7">
@@ -75,7 +75,7 @@
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPP-rc-3Qt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="For example: ipad cover" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPP-rc-3Qt">
                                 <rect key="frame" x="20" y="109" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -90,11 +90,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="ClickBtn:" destination="NYF-qm-QF2" eventType="touchUpInside" id="Uwp-Bg-PQb"/>
                                     <segue destination="mWr-bI-xxH" kind="push" identifier="next" id="a3z-bz-3AA"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pgL-Qc-Q4r">
-                                <rect key="frame" x="150" y="210" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7uF-lP-bdR">
+                                <rect key="frame" x="150" y="221" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
@@ -110,13 +111,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Brc-oM-V2X" kind="modal" id="wiT-kb-CYL"/>
+                                    <segue destination="Brc-oM-V2X" kind="modal" modalTransitionStyle="flipHorizontal" id="wiT-kb-CYL"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityInd" destination="pgL-Qc-Q4r" id="Gef-tV-75O"/>
+                        <outlet property="activityInd" destination="7uF-lP-bdR" id="pPW-IX-Gmw"/>
+                        <outlet property="searchButton" destination="oVC-4L-1mn" id="yRX-VG-eWV"/>
                         <outlet property="searchedItem" destination="ZPP-rc-3Qt" id="H5o-wD-N5K"/>
                     </connections>
                 </viewController>
@@ -266,10 +268,130 @@
             </objects>
             <point key="canvasLocation" x="2008" y="130"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--View Controller - Home-->
+        <scene sceneID="4AB-0p-7mu">
+            <objects>
+                <viewController id="2zy-aI-yTY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D04-HK-61X"/>
+                        <viewControllerLayoutGuide type="bottom" id="SJu-ht-qQB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3MI-wD-wP1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list-item.png" translatesAutoresizingMaskIntoConstraints="NO" id="IHY-F6-5L0">
+                                <rect key="frame" x="0.0" y="63" width="320" height="472"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best Price Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xR-RP-C7H">
+                                <rect key="frame" x="20" y="90" width="280" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use the bottom tabs to navigate throughout the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="245" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-Li-gqg">
+                                <rect key="frame" x="38" y="241" width="245" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="yRc-Ic-Frb">
+                                <rect key="frame" x="90" y="338" width="141" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="tgO-xe-kDF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHp-N3-JyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="-546"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZFp-5F-ZkC">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="aPJ-yF-qha" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="XEJ-pR-7cw">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Gbu-nj-9sa" kind="relationship" relationship="viewControllers" id="oAr-Vx-FXq"/>
+                        <segue destination="BEf-rh-Vur" kind="relationship" relationship="viewControllers" id="GPN-zw-hSW"/>
+                        <segue destination="bdB-jQ-f5B" kind="relationship" relationship="viewControllers" id="MGe-NE-haj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9od-Kg-Nhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-382" y="383"/>
+        </scene>
+        <!--Share View Controller - Share-->
+        <scene sceneID="YG2-Ue-Ayn">
+            <objects>
+                <viewController id="A9l-1A-2HY" customClass="ShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YeD-ro-PNp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wgd-2d-m50"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VK7-jz-FKh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list-item.png" translatesAutoresizingMaskIntoConstraints="NO" id="kKj-HY-U2E">
+                                <rect key="frame" x="0.0" y="59" width="320" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-ul-IRn">
+                                <rect key="frame" x="20" y="94" width="280" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="FaceBookShareButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareFacebook:" destination="A9l-1A-2HY" eventType="touchUpInside" id="SlF-kf-cWz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K1-0B-bef">
+                                <rect key="frame" x="20" y="174" width="280" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="TwitterShareButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareTwitter:" destination="A9l-1A-2HY" eventType="touchUpInside" id="uzl-6Q-I9a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXa-S4-5hL">
+                                <rect key="frame" x="20" y="269" width="280" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Share on Email" backgroundImage="button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareEmail:" destination="A9l-1A-2HY" eventType="touchUpInside" id="gtp-wQ-l0i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Share" id="7i3-V5-hRo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bj2-ou-53v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="801"/>
+        </scene>
+        <!--Navigation Controller - Find Item-->
         <scene sceneID="ua3-c7-WH0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BEf-rh-Vur" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Find Item" image="findit.png" id="Ilo-fW-ayK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h49-3e-i2u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -300,12 +422,56 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEb-ho-RB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="-536"/>
+            <point key="canvasLocation" x="1728" y="-536"/>
+        </scene>
+        <!--Navigation Controller - Home-->
+        <scene sceneID="dba-De-lUP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gbu-nj-9sa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="X05-ro-5cb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OON-6s-I2x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2zy-aI-yTY" kind="relationship" relationship="rootViewController" id="urB-kc-K8r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yvb-y7-myG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-553"/>
+        </scene>
+        <!--Navigation Controller - Share-->
+        <scene sceneID="be6-Mn-eBn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bdB-jQ-f5B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Share" image="shareicon.png" id="Lht-hG-U6m"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kVi-kD-s5Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A9l-1A-2HY" kind="relationship" relationship="rootViewController" id="EN6-hf-xx3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKN-XN-EPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="801"/>
         </scene>
     </scenes>
     <resources>
+        <image name="FaceBookShareButton.png" width="224" height="40"/>
+        <image name="Home.png" width="22" height="22"/>
+        <image name="TwitterShareButton.png" width="224" height="40"/>
         <image name="button.png" width="295" height="48"/>
+        <image name="downarrow.png" width="300" height="294"/>
+        <image name="findit.png" width="24" height="24"/>
         <image name="list-item.png" width="320" height="96"/>
+        <image name="shareicon.png" width="18" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

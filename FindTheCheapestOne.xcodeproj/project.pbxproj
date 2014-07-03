@@ -27,9 +27,19 @@
 		8829AF24194E483100E9699C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8829AF23194E483100E9699C /* Storyboard.storyboard */; };
 		8829AF27194E4D1600E9699C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8829AF26194E4D1600E9699C /* SearchViewController.m */; };
 		88950B981960A4F600AC54C5 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88950B971960A4F600AC54C5 /* InfoViewController.m */; };
+		88E38EFB19652BBC000D787A /* TheTabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EFA19652BBC000D787A /* TheTabBar.png */; };
+		88E38EFD19652BE7000D787A /* shareicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EFC19652BE7000D787A /* shareicon.png */; };
+		88E38EFF19652C04000D787A /* findit.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EFE19652C04000D787A /* findit.png */; };
+		88E38F0119652C19000D787A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E38F0019652C19000D787A /* Home.png */; };
 		88E3AB39195F5E8A00E8BECA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E3AB38195F5E8A00E8BECA /* WebViewController.m */; };
 		88E3AB3B195F60B400E8BECA /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E3AB3A195F60B400E8BECA /* button.png */; };
 		88E3AB3D195F614600E8BECA /* GreenNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E3AB3C195F614600E8BECA /* GreenNavBar.png */; };
+		88F2ACC51963FE0C0058A4A5 /* downarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F2ACC41963FE0C0058A4A5 /* downarrow.png */; };
+		88F2ACC81963FE620058A4A5 /* FaceBookShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F2ACC61963FE620058A4A5 /* FaceBookShareButton.png */; };
+		88F2ACC91963FE620058A4A5 /* TwitterShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F2ACC71963FE620058A4A5 /* TwitterShareButton.png */; };
+		88F2ACCC1963FF040058A4A5 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F2ACCB1963FF040058A4A5 /* ShareViewController.m */; };
+		88F2ACCE1963FF530058A4A5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F2ACCD1963FF530058A4A5 /* Social.framework */; };
+		88F2ACD01963FF590058A4A5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F2ACCF1963FF590058A4A5 /* MessageUI.framework */; };
 		88F3A050195CA5F800F45775 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F3A04F195CA5F800F45775 /* ResultsTableViewController.m */; };
 		88F3A053195CDB7700F45775 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F3A052195CDB7700F45775 /* DetailsViewController.m */; };
 		88FDA1D4195EAECC00009B2F /* list-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FDA1D3195EAECC00009B2F /* list-item.png */; };
@@ -72,10 +82,21 @@
 		8829AF26194E4D1600E9699C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		88950B961960A4F600AC54C5 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		88950B971960A4F600AC54C5 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		88E38EFA19652BBC000D787A /* TheTabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TheTabBar.png; path = ../../../Desktop/Resources/TheTabBar.png; sourceTree = "<group>"; };
+		88E38EFC19652BE7000D787A /* shareicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shareicon.png; path = "../../../Desktop/glyphish-icons-3/PNG icons/shareicon.png"; sourceTree = "<group>"; };
+		88E38EFE19652C04000D787A /* findit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = findit.png; path = "../../../Desktop/glyphish-icons-3/PNG icons/findit.png"; sourceTree = "<group>"; };
+		88E38F0019652C19000D787A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Home.png; path = ../../../Desktop/AppPicsJunk/Home.png; sourceTree = "<group>"; };
 		88E3AB37195F5E8A00E8BECA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		88E3AB38195F5E8A00E8BECA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		88E3AB3A195F60B400E8BECA /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		88E3AB3C195F614600E8BECA /* GreenNavBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenNavBar.png; sourceTree = "<group>"; };
+		88F2ACC41963FE0C0058A4A5 /* downarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downarrow.png; sourceTree = "<group>"; };
+		88F2ACC61963FE620058A4A5 /* FaceBookShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FaceBookShareButton.png; sourceTree = "<group>"; };
+		88F2ACC71963FE620058A4A5 /* TwitterShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterShareButton.png; sourceTree = "<group>"; };
+		88F2ACCA1963FF040058A4A5 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		88F2ACCB1963FF040058A4A5 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		88F2ACCD1963FF530058A4A5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		88F2ACCF1963FF590058A4A5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		88F3A04E195CA5F800F45775 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		88F3A04F195CA5F800F45775 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		88F3A051195CDB7700F45775 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -88,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F2ACD01963FF590058A4A5 /* MessageUI.framework in Frameworks */,
+				88F2ACCE1963FF530058A4A5 /* Social.framework in Frameworks */,
 				8829AEF1194E481400E9699C /* CoreGraphics.framework in Frameworks */,
 				8829AEF5194E481400E9699C /* CoreData.framework in Frameworks */,
 				8829AEF3194E481400E9699C /* UIKit.framework in Frameworks */,
@@ -131,6 +154,8 @@
 		8829AEED194E481400E9699C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88F2ACCF1963FF590058A4A5 /* MessageUI.framework */,
+				88F2ACCD1963FF530058A4A5 /* Social.framework */,
 				8829AEEE194E481400E9699C /* Foundation.framework */,
 				8829AEF0194E481400E9699C /* CoreGraphics.framework */,
 				8829AEF2194E481400E9699C /* UIKit.framework */,
@@ -144,10 +169,17 @@
 			isa = PBXGroup;
 			children = (
 				88FDA1D3195EAECC00009B2F /* list-item.png */,
+				88E38EFA19652BBC000D787A /* TheTabBar.png */,
+				88E38F0019652C19000D787A /* Home.png */,
+				88E38EFC19652BE7000D787A /* shareicon.png */,
+				88F2ACC61963FE620058A4A5 /* FaceBookShareButton.png */,
+				88E38EFE19652C04000D787A /* findit.png */,
+				88F2ACC71963FE620058A4A5 /* TwitterShareButton.png */,
 				88E3AB3A195F60B400E8BECA /* button.png */,
 				88E3AB3C195F614600E8BECA /* GreenNavBar.png */,
 				8829AEFF194E481400E9699C /* AppDelegate.h */,
 				8829AF00194E481400E9699C /* AppDelegate.m */,
+				88F2ACC41963FE0C0058A4A5 /* downarrow.png */,
 				8829AF23194E483100E9699C /* Storyboard.storyboard */,
 				8829AF25194E4D1600E9699C /* SearchViewController.h */,
 				8829AF26194E4D1600E9699C /* SearchViewController.m */,
@@ -162,6 +194,8 @@
 				88E3AB38195F5E8A00E8BECA /* WebViewController.m */,
 				88950B961960A4F600AC54C5 /* InfoViewController.h */,
 				88950B971960A4F600AC54C5 /* InfoViewController.m */,
+				88F2ACCA1963FF040058A4A5 /* ShareViewController.h */,
+				88F2ACCB1963FF040058A4A5 /* ShareViewController.m */,
 				8829AF05194E481400E9699C /* Images.xcassets */,
 				8829AF02194E481400E9699C /* FindTheCheapestOne.xcdatamodeld */,
 				8829AEF7194E481400E9699C /* Supporting Files */,
@@ -273,9 +307,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E38EFD19652BE7000D787A /* shareicon.png in Resources */,
 				880224E4195DD7F500F65DD7 /* NiceTableViewCell.xib in Resources */,
 				88E3AB3B195F60B400E8BECA /* button.png in Resources */,
+				88F2ACC81963FE620058A4A5 /* FaceBookShareButton.png in Resources */,
+				88E38EFB19652BBC000D787A /* TheTabBar.png in Resources */,
 				88FDA1D4195EAECC00009B2F /* list-item.png in Resources */,
+				88E38F0119652C19000D787A /* Home.png in Resources */,
+				88F2ACC51963FE0C0058A4A5 /* downarrow.png in Resources */,
+				88F2ACC91963FE620058A4A5 /* TwitterShareButton.png in Resources */,
+				88E38EFF19652C04000D787A /* findit.png in Resources */,
 				8829AEFB194E481400E9699C /* InfoPlist.strings in Resources */,
 				88E3AB3D195F614600E8BECA /* GreenNavBar.png in Resources */,
 				8829AF06194E481400E9699C /* Images.xcassets in Resources */,
@@ -306,6 +347,7 @@
 				8829AF27194E4D1600E9699C /* SearchViewController.m in Sources */,
 				88F3A053195CDB7700F45775 /* DetailsViewController.m in Sources */,
 				8829AEFD194E481400E9699C /* main.m in Sources */,
+				88F2ACCC1963FF040058A4A5 /* ShareViewController.m in Sources */,
 				88F3A050195CA5F800F45775 /* ResultsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
